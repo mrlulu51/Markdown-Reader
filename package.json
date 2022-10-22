@@ -3,6 +3,13 @@
   "version": "0.1",
   "description": "A markdown file viewer based in TypeScript.",
   "main": "dist/main.js",
+  "scripts": {
+    "start:dev": "yarn build:dev && node dist/main",
+    "start": "node dist/main",
+    "build:dev": "tsc",
+    "build": "electron-builder",
+    "postinstall": "electron-builder --install-app-deps"
+  },
   "repository": "https://github.com/mrlulu51/Markdown-Reader",
   "author": "mrlulu51",
   "license": "MIT",
